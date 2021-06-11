@@ -52,11 +52,13 @@ return (
         </select>
         <br></br>
         <button onClick={handleFilter}>{toggleFilter? "Bring me all the pigs!" : "Bring me the greased pigs!"}</button>
+        <div className='ui grid container'>
         {filteredPigs.map(hog => 
             <Pig 
             hog={hog}
             key={hog.name}/>
-)}
+    )}
+    </div>
     </div>
 )
 
